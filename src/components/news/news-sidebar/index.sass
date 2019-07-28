@@ -1,0 +1,154 @@
+.news-sidebar-social-network
+	padding: 20px 30px  0 20px
+	background: #f2f2f2
+	ul
+		padding: 0
+		margin: 0
+		display: flex
+		flex-wrap: wrap
+		list-style-type: none
+		&:hover
+			li
+				a
+					em
+						color: #cacaca
+		li
+			display: flex
+			padding: 30px 0
+			margin: 0 0
+			flex: 0 0  33%
+			justify-content: center
+			align-items: center
+			&:last-child
+				margin: 0 
+			
+			&:hover
+				&:nth-child(1)
+					a
+						em
+							color: #3b5999
+				&:nth-child(2)
+					a
+						em
+							color: #55acee
+				&:nth-child(3)
+					a
+						em
+							color: #bd081c
+				&:nth-child(4)
+					a
+						em
+							color: #cd201f
+				&:nth-child(5)
+					a
+						em
+							color: #0077B5
+				&:nth-child(6)
+					a
+						em
+							color: #3f729b
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				position: relative
+				
+				img
+					
+					width: 25px
+					height: 25px
+					line-height: 40px
+					margin-bottom: 9px
+				em
+					transition: all .3s ease 0s
+					color: #666666
+					font-size: 20px
+				p
+					padding-top: 10px
+					font-size: 14px
+					font-weight: 400
+					text-transform: uppercase
+					font-family: 'Cinzel'
+					color: #373737
+	@media screen and(max-width: 1200px)
+		ul
+			display: flex
+			flex-wrap: wrap
+			li
+				margin: 0 0
+				flex: 0 0 50%
+				display: flex
+				justify-content: center
+				align-items: center
+				&:last-child
+					margin: 0 0
+
+	@media screen and(max-width: 1025px)
+		ul
+			li
+				flex: 0 0 33.33%
+				margin: 0 0 40px 0
+	@media screen and(max-width: 767.9px)
+		ul
+			display: flex
+			justify-content: space-around
+			align-items: center
+			li
+				margin: 0 0
+				a
+					p
+						display: none
+.new-sidebar-newsletter
+	padding-top: 100px
+	p
+		padding-bottom: 50px
+		font-size: 16px
+		font-weight: 400
+		color: #373737
+		line-height: 24px
+	.subscribefrm
+		width: 100%
+		button
+			background: none
+			color: #373737
+			font-weight: 400
+			font-family: 'Cinzel'
+			text-transform: uppercase
+			border: none
+			float: right
+			clear: both
+			margin-top: 40px
+			display: flex
+			justify-content: center
+			align-items: center
+			em
+				color: #fc0d1b
+				padding-left: 30px
+				font-size: 25px
+				height: 30px
+			&:focus
+				outline: none
+		input
+			overflow: hidden
+			padding-bottom: 10px
+			width: 100%
+			height: 100%
+			background: none
+			border: none
+			font-size: 16px
+			position: relative
+			color: #333333
+			border-bottom: 1px solid #a1a1a1
+			&:focus
+				outline: none
+			&::placeholder
+				font-size: 16px
+				color: #999999
+				line-height: 24px
+				line-height: 24px
+	@media screen and(max-width:1025px)
+		padding-top: 50px
+.news-sidebar
+	@media screen and(max-width: 1025px)
+		margin-bottom: 150px

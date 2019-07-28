@@ -1,0 +1,72 @@
+.afm-breadcrumb
+	padding: 180px  0 12px 0
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	.breadcrumb-title
+		h2
+			text-align: center
+			font-family: 'Cinzel'
+			font-size: 45px
+			color: #373737
+			font-weight: 500
+			line-height: 52px
+			letter-spacing: 45px*.0625
+	ol
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			display: inline-flex
+			font-size: 16px
+			line-height: 20px
+			padding: 0 12px
+			position: relative
+			&:not(:last-child)
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					bottom: 2px
+					right: 0
+					width: 2px
+					height: 18px
+					background: #a6a6a6
+
+			&.active
+				color: #a6a6a6
+			a
+				text-decoration: none
+				font-size: 16px
+				line-height: 23px
+				color: #a6a6a6
+	@media screen and(max-width: 1400px)
+		padding: 100px  0 12px 0
+	@media screen and(max-width: 1200px)
+		margin-bottom: 30px
+		.breadcrumb-title
+			h2
+				font-size: 40px
+	@media screen and(max-width: 768px)
+		padding: 70px  0 12px 0
+		margin-bottom: 20px
+		.breadcrumb-title
+			h2
+				font-size: 35px
+	@media screen and(max-width: 576px)
+		padding: 50px 0 0 0
+		.breadcrumb-title
+			h2
+				font-size: 30px
+				white-space: nowrap
+		.breadcrumb
+			white-space: nowrap
+			li
+				font-size: 14px
+				line-height: 22px
+				a
+					font-size: 13px
+					line-height: 22px
+					span
+						font-size: 13px

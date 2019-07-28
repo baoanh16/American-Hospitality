@@ -1,0 +1,14 @@
+extends _layout.pug
+
+block var
+	- var title = 'About'
+	- var bodyClass = 'what-we-do'
+
+block main
+	section.section-header
+		.container-fluid
+			.container
+				include ../components/breadcrumb/index.pug
+				include ../components/about/about-us-2/about-job/index.pug
+				include ../components/about/about-us-2/about-quote/index.pug
+				include ../components/about/about-us-2/we-do-swiper/index.pug

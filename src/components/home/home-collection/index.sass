@@ -1,0 +1,140 @@
+.afm-home-collection
+	position: relative
+	.swiper-slide
+		.wrapper
+			img
+				max-width: 100%
+				height: auto
+				width: 100%
+				&:nth-child(1)
+					filter: grayscale(100%)
+	@media screen and(max-width:1200px)
+		height: 70vh
+		.swiper-slide
+			.wrapper
+				img
+					&:nth-child(1)
+						filter: grayscale(0)
+				.twentytwenty-handle
+					display: none
+	@media screen and(max-width:1025px)
+	
+//HOME title
+.home-article-wrapper
+	position: absolute
+	top: 50%
+	left: 16.333%
+	z-index: 9
+	transform: translateY(-50%)
+	.collection-title
+		padding-bottom: 150px
+	.collection-pagination-wrapper
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		width: 100%
+		opacity: 1
+		filter: none
+		position: relative
+		margin-top: 150px
+		transition: all .3s ease 0s
+		svg
+			transform: rotate(-45deg)
+			position: absolute
+			left: 50%
+			top: 50%
+			font-size: 35px
+			.svg-link-rect
+				stroke-dasharray: 0 87.5
+				stroke-dashoffset: -70
+				stroke-width: 5px
+				fill: transparent
+				stroke: #ff0000
+				border-bottom: 5px solid #000
+				transition: stroke-width .8s,stroke-dashoffset .8s,stroke-dasharray .8s,stroke .8s
+		.swiper-pagination-bullet
+			opacity: .65
+			position: relative
+			display: inline-block
+			outline: none
+			border: none
+			background: none
+			font-family: 'Cinzel'
+			position: relative
+			line-height: 45px
+			text-transform: uppercase
+			color: #ffffff
+			transition: all .8s ease 0s
+			padding-right: 150px
+			.svg-link-button
+				position: absolute
+				bottom: 0
+				left: 13%
+			&.swiper-pagination-bullet-active
+				opacity: 1
+				svg
+					animation: expand .5s
+					opacity: 0
+			&:hover
+				svg
+					.svg-link-rect
+						stroke-width: 5px
+						stroke-dashoffset: 0
+						stroke-dasharray: 140
+	.svg-link
+		opacity: 1
+		position: relative
+		display: inline-block
+		margin-top: 80px
+		.swiper-pagination-bullet
+			opacity: 1
+		&:hover
+			.svg-link-button
+				svg
+					.svg-link-shape
+						stroke-width: 5px
+						stroke-dashoffset: 0
+						stroke-dasharray: 180
+						stroke: #ff0000
+				.svg-link-title
+					color: #6e6e6e
+		.svg-link-button
+			display: block
+			text-decoration: none
+			margin: 0
+			transition: .3s all ease 0s
+			color: #df1c1c
+			svg
+				transform: rotate(-45deg)
+				font-size: 45px
+				position: absolute
+				right: 12px
+				.svg-link-shape
+					stroke-dasharray: 45 90
+					stroke-dashoffset: -67.5
+					stroke-width: 5px
+					fill: transparent
+					stroke: #df1c1c
+					border-bottom: 5px solid #000
+					transition: stroke-width .8s,stroke-dashoffset .8s,stroke-dasharray .8s,stroke .8s
+			.svg-link-title
+				font-family: 'Cinzel'
+				position: relative
+				line-height: 45px
+				text-transform: uppercase
+				margin-right: 30px
+				margin-top: 0
+				color: #fff
+				background: 0 0
+				border: none
+				-webkit-transition: all .8s ease 0s
+				transition: all .8s ease 0s
+	@media screen and(max-width:1200px)
+		height: 100%
+	@media screen and(max-width: 1025px)
+		.collection-title
+			padding-bottom: 50px
+		.collection-pagination-wrapper
+			margin-top: 0
+	@media screen and(max-width:768px)
+		height: 70vh

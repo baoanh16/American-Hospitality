@@ -1,0 +1,18 @@
+extends _layout.pug
+
+block var
+	- var title = 'Collection'
+	- var bodyClass = 'collections'
+
+block main
+	section.section-header
+		.container-fluid
+			.container
+				include ../components/breadcrumb/index.pug
+				.row
+					.col-lg-3
+						include ../components/products/side-filter/index.pug
+					.col-lg-9
+						include ../components/products/top-filter/index.pug
+						include ../components/products/product-display/index.pug
+						include ../components/pagination/index.pug

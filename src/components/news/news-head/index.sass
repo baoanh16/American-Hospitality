@@ -1,0 +1,135 @@
+.afm-news-head
+	padding: 100px 0 70px 0
+	.news-item-main
+		position: relative
+		.afm-news-caption
+			padding: 40px 30px
+			h2
+				font-size: 30px
+		.afm-news-image
+			height: 520px
+	.news-item-side
+		position: relative
+		.afm-news-image
+			height: 250px
+		.afm-news-caption
+			padding: 30px
+			h2
+				font-size: 16px
+	.news-side-wrapper
+		.news-item-side
+			&:nth-child(1)
+				margin-bottom: 15px
+			&:nth-child(2)
+				margin-top: 15px
+	@media screen and(max-width:1600px)
+		padding: 70px 0
+		.news-item-main
+			.afm-news-caption
+				padding: 20px 30px
+				h2
+					font-size: 30px
+			.afm-news-image
+				height: 440px
+		.news-item-side
+			position: relative
+			.afm-news-image
+				height: 210px
+			.afm-news-caption
+				padding: 16px 20px
+	@media screen and(max-width:1025px)
+		padding: 50px 0 30px 0
+		.news-item-main
+			margin-bottom: 30px
+			.afm-news-caption
+				h2
+					font-size: 24px
+			.afm-news-image
+				height: 380px
+		.news-item-side
+			position: relative
+			.afm-news-image
+				height: 250px
+		.news-side-wrapper
+			flex-wrap: wrap
+			display: flex
+			.news-item-side
+				flex: 0 0 50%
+				&:nth-child(1)
+					margin: 0
+					border-right: 10px solid transparent
+				&:nth-child(2)
+					margin: 0
+					border-left: 10px solid transparent
+	@media screen and(max-width:576px)
+		.news-item-main
+			margin-bottom: 20px
+			.afm-news-image
+				height: 300px
+			.afm-news-caption
+				padding: 20px 20px
+				h2
+					font-size: 20px
+		.news-item-side
+			.afm-news-image
+				height: 150px
+			.afm-news-caption
+				padding: 10px 10px
+				
+				h2
+					font-size: 14px
+	@media screen and(max-width:440px)
+		.news-item-main
+			.afm-news-caption
+				padding: 10px 10px
+		.news-side-wrapper
+			.news-item-side
+				flex: 0 0 100%
+				.afm-news-image
+					height: 200px
+				&:nth-child(1)
+					margin: 0 0 20px 0
+					border-right: none
+
+				&:nth-child(2)
+					margin: 0
+					border-left: none
+
+
+.afm-news-image
+	width: auto
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.afm-news-caption
+	position: absolute
+	bottom: 0
+	display: flex
+	flex-flow: column
+	align-items: flex-start
+	justify-content: flex-end
+	left: 0
+	width: 100%
+	height: 100%
+	pointer-events: none
+	background: linear-gradient( 0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%, rgba(0,0,0,0) 100%)
+	*
+		color: #ffffff
+		font-family: 'Cinzel'
+		
+	time
+		font-family: 'Cinzel'
+		color: #ffffff
+		font-weight: 400
+		font-size: 15px
+		line-height: 22px
+	h2
+		text-transform: uppercase
+		font-family: 'Cinzel'
+		color: #ffffff
+		font-weight: 700
+
+	@media screen and(max-width:768px)
+		time
+			font-size: 14px

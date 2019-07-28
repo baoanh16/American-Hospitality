@@ -1,0 +1,150 @@
+.about-us-tab-information
+	.about-tab
+		padding-bottom: 140px
+		display: flex
+		justify-content: center
+		align-items: center
+		.introduce-information-tab
+			list-style-type: none
+			margin: 0
+			padding: 0
+			li
+				display: inline
+				&.active
+					a
+						color: #202020
+				a
+					padding: 8px 24px
+					text-transform: uppercase
+					text-decoration: none
+					font-family: 'Cinzel'
+					font-weight: 400
+					color: #999999
+		@media screen and(max-width:1025px)
+			padding: 70px 0 50px 0
+		@media screen and(max-width:768px)
+			padding: 0 0 50px
+			.introduce-information-tab
+				li
+					a
+						padding: 8px 16px
+		@media screen and(max-width:576px)
+			.introduce-information-tab
+				white-space: nowrap
+				overflow-x: auto
+	.about-us-information-wrapper
+		padding-bottom: 170px
+		@media screen and(max-width:1600px)
+			padding-bottom: 150px
+		@media screen and(max-width:1025px)
+			padding-bottom: 90px
+		@media screen and(max-width:768px)
+			padding-bottom: 70px
+		.informaton-item-wrapper
+			padding:  0 25px
+			background: url('../img/about/bg.jpg')
+			background-size: contain
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-flow: column
+			&:not(:first-child)
+				display: none
+			@media screen and(max-width:1025px)
+				padding: 25px  0
+			@media screen and(max-width:576px)
+				flex-flow: row
+				flex-wrap: wrap
+		.information-item
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-flow: row
+			&:nth-child(1)
+				.information-item-image
+					position: relative
+					margin-top: -70px
+			&:nth-child(2)
+				flex-direction: row-reverse
+				.information-item-image
+					position: relative
+					margin-bottom: -70px
+
+			.information-item-image
+				padding: 0 25px
+				max-width: 50%
+				min-width: 50%
+				height: 340px
+				width: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+			.information-caption
+				padding: 0 25px
+				max-width: 50%
+				min-width: 50%
+				*
+					padding-left: 16px
+					color: #333333
+				h2
+					font-weight: 700
+					font-size: 40px
+					font-family: 'Cinzel'
+				p
+					font-weight: 400
+					font-size: 16px
+					font-weight: 400
+			@media screen and(max-width:1025px)
+				.information-caption
+					h2
+						font-size: 30px
+						line-height: 38px
+				&:nth-child(1)
+					.information-item-image
+						margin-top: 0
+						padding-right: 12px
+
+				&:nth-child(2)
+					.information-item-image
+						margin-bottom: 0
+						padding-left: 12px
+
+				.information-item-image
+					height: 200px
+			@media screen and(max-width:768px)
+				&:nth-child(1)
+					padding-bottom: 20px
+				.information-caption
+					*
+						padding: 0
+					p
+						font-size: 15px
+						line-height: 22px
+			@media screen and(max-width:576px)
+				padding: 0 25px
+				flex: 0 0 100%
+				flex-flow: column
+				&:nth-child(1)
+					padding-bottom: 0
+					.information-item-image
+						padding: 0 0
+				&:nth-child(2)
+					.information-item-image
+						padding: 0 0
+				.information-caption
+					padding: 25px 0
+					max-width: 100%
+					h2
+						font-size: 26px
+						line-height: 34px
+				.information-item-image
+					padding: 0 0
+					max-width: 100%
+					height: 250px
+				&:nth-child(2)
+					flex-direction: row
+					flex-flow: column
+			@media screen and(max-width:400px)
+				.information-item-image
+					height: 200px

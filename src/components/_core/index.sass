@@ -1,0 +1,632 @@
+html,body
+	font-family: 'Titillium Web', sans-serif
+//Decleare background and home page size
+body
+	max-width: 1600px
+	margin: 0 auto
+	main
+		background-repeat: no-repeat
+	&::selection
+		background: #df1c1c
+		color: #fff
+	&.home-page
+		max-width: none
+		.container-fluid
+			padding: 0
+			margin: 0
+		main
+			padding: 0 25px
+			background: none
+			@media screen and(max-width:768px)
+				padding: 0
+		.container
+			max-width: 100%
+			padding: 0 100px
+		@media screen and(max-width:1200px)
+			.container
+				padding: 0 48px
+		@media screen and(max-width:576px)
+			.container
+				padding: 0 48px
+	&.who-we-are
+		main
+			background: url('../img/bg-8.png')
+			background-repeat: no-repeat
+	&.what-we-do
+		main
+			background: url('../img/bg-1.png')
+			background-repeat: no-repeat
+	&.people
+		main
+			background: url('../img/bg-1.png')
+			background-repeat: no-repeat
+	&.about-us
+		main
+			background: url('../img/bg-1.png')
+			background-repeat: no-repeat
+	&.contact
+		main
+			background: url('../img/bg-10.png')
+			background-repeat: no-repeat
+	&.gallery
+		main
+			background: url('../img/bg-9.png')
+			background-repeat: no-repeat
+	&.news
+		main
+			background: url('../img/bg-7.png')
+			background-repeat: no-repeat
+	&.news-detail
+		main
+			background: url('../img/news-bg.jpg')
+			background-repeat: no-repeat
+	&.process
+		main
+			background: url('../img/bg-3.png')
+			background-repeat: no-repeat
+	&.product-detail
+		main
+			background: url('../img/bg-5.png')
+			background-repeat: no-repeat
+	&.collections
+		main
+			background: url('../img/bg-5.png')
+			background-repeat: no-repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Decleare global oftopn
+.offset-1
+	margin-left: 0
+	@media screen and(min-width:1025px)
+		margin-left: 8.333333%
+.offset-2
+	margin-left: 0
+	@media screen and(min-width:1025px)
+		 margin-left: 16.666667%
+main
+	padding: 70px 0 0  0
+	background-repeat: no-repeat
+	background-color: #f9f9f9
+	@media screen and(max-width: 1200px)
+		padding: 50px 0 0  0
+	@media screen and(max-width: 1025px)
+		padding: 50px 0 0  0
+//Text gradient Title
+.text-gradient-title
+	width: 0
+	height: 0
+	overflow: visible
+	position: relative
+	text-align: left
+	float: left
+	display: inline-block
+	z-index: 1
+	h5
+		white-space: nowrap
+		position: absolute
+		font-family: 'Cinzel'
+		text-transform: uppercase
+		color: #fc0d1b
+		display: inline
+		font-size: 14px
+		font-weight: 400
+		transform: rotate(-90deg)
+		right: 0
+		background-image: -webkit-linear-gradient( #fc0d1b , #81050c)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+	@media screen and(max-width:768.9px)
+		display: none
+//section header
+.section-header
+	overflow: hidden
+
+	.container-fluid
+	
+.rotate-title
+	width: 0
+	height: 0
+	overflow: visible
+	position: relative
+	-webkit-transform: rotate(-90deg)
+	transform: rotate(-90deg)
+	text-align: left
+	float: left
+	display: inline-block
+	z-index: 1
+	p
+		position: absolute
+		bottom: 0
+		right: 0
+		display: block
+		white-space: nowrap
+		overflow: visible
+		font-family: 'Cinzel'
+		text-transform: uppercase
+		display: inline
+		font-size: 14px
+		color: #ff0000
+		font-weight: 400
+		background-image: -webkit-linear-gradient(left, #ff0000 0, #800000 100%)
+		background-image: linear-gradient(to right, #ff0000 0, #800000 100%)
+		-moz-background-clip: text
+		background: -o-linear-gradient(transparent, transparent)
+		-webkit-background-clip: text
+	@media screen and(max-width:1600px)
+	@media screen and(max-width:1025px)
+		display: none
+.article-title-about
+	h2
+		color: #373737
+		font-family: 'Cinzel'
+		text-transform: uppercase
+		font-weight: 700
+		font-size: 35px
+		line-height: 42px
+		letter-spacing: 35px*.0625
+		padding-bottom: 30px
+	@media screen and(max-width:1025px)
+		h2
+			padding-bottom: 15px
+			font-size: 25px
+
+.navigation-next,.navigation-prev
+	z-index: 99
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 46px
+	height: 46px
+	border: 2px solid #fa1126
+	position: absolute
+	top: 50%
+	transform: translateX(-50%)
+	opacity: 1
+	em
+		color: #fa1126
+		opacity: 1
+	&.swiper-button-disabled
+		border: none
+		em
+			color: #b4b4b4
+			opacity: 1
+	&:focus
+		outline: none
+// Declalre Background section
+.about-us-bottom
+	background: url('../img/bg-2.png')
+	background-repeat: no-repeat
+	background-size: cover
+//Product item
+.afm-products
+	.product-display-item
+		margin-bottom: 30px
+.product-display-item
+	figure
+		position: relative
+	.figure-image
+		height: 320px
+		width: auto
+		a
+			text-decoration: none
+			display: block
+			z-index: 10
+			width: 100%
+			position: relative
+			height: 100%
+			top: 0
+			left: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.figure-caption
+		pointer-events: none
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: flex-end
+		background: linear-gradient( 0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 47%, rgba(0,0,0,0) 100%)
+		z-index: 10
+		p
+			position: relative
+			z-index: 11
+			padding: 25px 
+			font-size: 16px
+			color: #ffffff
+			font-family: 'Cinzel'
+			*
+				text-decoration: none
+				font-size: 16px
+				color: #ffffff
+				text-transform: uppercase
+				font-family: 'Cinzel'
+			a
+				text-decoration: none
+				font-size: 16px
+				color: #ffffff
+				text-transform: uppercase
+				font-family: 'Cinzel'
+	@media screen and(max-width:1600px)
+		.figure-image
+			height: 250px
+		.figure-caption
+			p
+				padding: 20px
+//HIDE BUTTON
+.frm-btn-reset
+	display: none
+//New item list
+.news-item-list
+	margin-bottom: 30px
+	.news-image-list
+		height: 250px
+		position: relative
+		width: auto
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+		z-index: 1
+		&:after,&:before
+			content: ""
+			position: absolute 
+			z-index: -1
+			box-shadow: 0 0 30px rgba(0,0,0,0.3)
+			top: 50%
+			bottom: 0
+			left: 25%
+			right: 25%
+			border-radius: 20px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.news-caption
+		padding: 10px 0
+		time
+			font-weight: 300
+		h5
+			padding-top: 8px
+			font-family: 'Cinzel'
+			font-weight: 700
+			line-height: 24px
+			letter-spacing: 16px*.0625
+			color: #333333
+			font-size: 16px
+			text-transform: uppercase
+			a
+				text-decoration: none
+				font-family: 'Cinzel'
+				font-weight: 700
+				color: #333333
+				line-height: 24px
+				font-size: 16px
+				text-transform: uppercase
+	@media screen and(max-width:1025px)
+		margin-bottom: 20px
+		.news-item-list
+			margin-bottom: 20px
+		.news-caption
+			padding: 16px 0
+			time
+				font-size: 15px
+			h5
+				font-size: 15px
+				a
+					font-size: 15px
+	@media screen and(max-width:500px)
+		.news-image-list
+			height: 200px
+
+
+
+//HOme article wrapper 2
+.home-article-wrapper-2
+	position: absolute
+	top: 50%
+	left: 16.33%
+	z-index: 9
+	transform: translateY(-50%)
+	*
+		color: #ffffff
+	h2
+		font-family: 'Cinzel'
+		font-size: 55px
+		line-height: 72px
+		font-weight: 400
+		text-transform: uppercase
+	
+	.capion,.discount
+		font-weight: 400
+		font-style: normal
+		font-size: 21px
+		line-height: 29px
+		margin: 50px 0 0 0 
+		text-transform: none
+	.svg-link
+		opacity: 1
+		position: relative
+		display: inline-block
+		margin-top: 50px
+		float: right
+		
+		.swiper-pagination-bullet
+			opacity: 1
+		&:hover
+			.svg-link-button
+				svg
+					.svg-link-shape
+						stroke-width: 5px
+						stroke-dashoffset: 0
+						stroke-dasharray: 180
+						stroke: #ff0000
+				.svg-link-title
+					color: #6e6e6e
+		.svg-link-button
+			display: block
+			text-decoration: none
+			margin: 0
+			transition: .3s all ease 0s
+			color: #df1c1c
+			svg
+				transform: rotate(-45deg)
+				font-size: 45px
+				position: absolute
+				right: 12px
+				.svg-link-shape
+					stroke-dasharray: 45 90
+					stroke-dashoffset: -67.5
+					stroke-width: 5px
+					fill: transparent
+					stroke: #df1c1c
+					border-bottom: 5px solid #000
+					transition: stroke-width .8s,stroke-dashoffset .8s,stroke-dasharray .8s,stroke .8s
+			.svg-link-title
+				font-family: 'Cinzel'
+				position: relative
+				line-height: 45px
+				text-transform: uppercase
+				margin-right: 30px
+				margin-top: 0
+				color: #fff
+				background: 0 0
+				border: none
+				-webkit-transition: all .8s ease 0s
+				transition: all .8s ease 0s
+	@media screen and(max-width:1600px)
+		h2
+			font-size: 60px
+			line-height: 67px
+		.capion,p
+			font-size: 16px
+			line-height: 24px
+	@media screen and(max-width:1200px)
+		h2
+			font-size: 60px
+			line-height: 72px
+		.capion,.discount
+			margin: 30px 0 0
+		
+		.svg-link
+			margin-top: 20px
+	@media screen and(max-width:1025px)
+		transform: none
+		position: static
+		h2
+			font-size: 55px
+		.capion,.discount
+			margin: 10px 0 0 
+			font-size: 18px
+			line-height: 25px
+	@media screen and(max-width:768px)
+		h2
+			font-size: 40px
+			line-height: 48px
+		.discount
+			display: none
+	@media screen and(max-width:576px)
+		.svg-link
+			.svg-link-button
+				.svg-link-title
+					line-height: 20px
+					font-size: 13px
+		.capion
+			display: inline-block
+			text-overflow: ellipsis
+			overflow: hidden
+			width: 100%
+			line-height: 23px
+			height: 140px
+			margin: 20px 0 0
+	@media screen and(max-width:400px)
+		h2
+			font-size: 35px
+	
+
+	@media screen and(max-width:1200px)
+.fullpage
+	position: relative
+//Home nav
+.home-nav
+	position: absolute
+	top: 85px
+	left: 40px
+	height: calc(100% - 95px)
+	display: table
+	z-index: 9
+	padding: 0
+	.home-nav-tooltip
+		pointer-events: none
+		-webkit-transform: rotate(90deg) translateX(-20px)
+		transform: rotate(90deg) translateX(-20px)
+		-webkit-transform-origin: left
+		transform-origin: left
+		display: block
+		top: 18px
+		position: absolute
+		left: 10px
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+		filter: alpha(opacity=0)
+		-webkit-transition: all .3s ease 0s
+		transition: all .3s ease 0s
+	.home-nav-dot
+		background: #6e6e6e
+		border: 2px solid #6e6e6e
+		display: inline-block
+		width: 8px
+		height: 8px
+		margin-left: -4px
+		border-radius: 50%
+		-webkit-transform: rotate(90deg)
+		transform: rotate(90deg)
+		vertical-align: middle
+		-webkit-transition: all .3s ease 0s
+		transition: all .3s ease 0s
+	.home-nav-text
+		overflow: hidden
+		display: inline-block
+		max-width: 0
+		line-height: 12px
+		margin-bottom: 0
+		margin-right: -10px
+		padding-right: 20px
+		vertical-align: middle
+		-webkit-transition: all 1s ease 0s
+		transition: all 1s ease 0s
+	.home-nav-text-content
+		opacity: 0
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+		filter: alpha(opacity=0)
+		position: relative
+		display: inline-block
+		-webkit-transform: translateX(110px)
+		transform: translateX(110px)
+		-webkit-transition: all .15s ease 0s
+		transition: all .15s ease 0s
+	.home-nav-li
+		margin: 0
+		list-style: none
+		width: 10px
+		height: 10px
+		white-space: nowrap
+		overflow: visible
+		transition: all .7s ease 0s
+		position: absolute
+		opacity: 1
+		&.active ~ .home-nav-li
+			&:last-child
+				top: calc(100vh - 155px)
+			&:nth-last-child(2)
+				top: calc(100vh - 185px)
+			&:nth-last-child(3)
+				top: calc(100vh - 215px)
+			&:nth-last-child(4)
+				top: calc(100vh - 245px)
+			&:nth-last-child(5)
+				top: calc(100vh - 275px)
+		&:nth-child(1) 
+			top: 30px
+		&:nth-child(2) 
+			top: 60px
+		&:nth-child(3) 
+			top: 90px
+		&:nth-child(4) 
+			top: 120px
+		&:nth-child(5) 
+			top: 150px
+		&:hover
+			.home-nav-dot 
+				background: 0 0
+				border: 2px solid #fff
+				display: inline-block
+				width: 14px
+				height: 14px
+				margin-left: -7px
+				border-radius: 0
+			.home-nav-tooltip
+				opacity: 1
+				-ms-filter: none
+				-webkit-filter: none
+				filter: none
+				-webkit-transform: rotate(90deg) translateX(0)
+				transform: rotate(90deg) translateX(0)
+
+		&.active
+			top: calc(50vh - 57.5px)
+			opacity: 1
+			.home-nav-dot 
+			.home-nav-tooltip
+				display: none
+			&:hover
+			a
+				color: #df1c1c
+				max-width: 200px
+				text-align: center
+				vertical-align: sub
+				margin-top: 100px
+				-webkit-transition: all 1s ease 0s
+				transition: all 1s ease 0s
+			.home-nav-text
+				max-width: 200px
+				overflow: hidden
+				-webkit-transition: all 1s ease 0s
+				transition: all 1s ease 0s
+			.home-nav-dot
+				background: 0 0
+				border: 2px solid #df1c1c
+				display: inline-block
+				width: 14px
+				height: 14px
+				border-radius: 0
+			.home-nav-text-content
+				-webkit-transform: translateX(0)
+				transform: translateX(0)
+				opacity: 1
+				-ms-filter: none
+				-webkit-filter: none
+				filter: none
+				-webkit-transition: -webkit-transform 1s ease 1s, opacity 1.8s ease 1s
+				transition: transform 1s ease 1s, opacity 1.8s ease 1s
+				text-transform: uppercase
+		a
+			position: relative
+			-webkit-transform: rotate(-90deg)
+			transform: rotate(-90deg)
+			display: block
+			margin: 0 0 0 14px
+			-webkit-transform-origin: bottom left
+			transform-origin: bottom left
+			height: 10px
+			padding: 0
+			width: 200px
+			color: #fff
+			text-align: center
+			max-width: 0
+			line-height: 0
+			-webkit-transition: all 1s ease 0s
+			transition: all 1s ease 0s
+			white-space: nowrap
+	@media screen and(max-width: 1025px)
+		display: none

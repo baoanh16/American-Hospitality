@@ -1,0 +1,15 @@
+extends _layout.pug
+
+block var
+	- var title = 'About'
+	- var bodyClass = 'about-us'
+
+block main
+	section.section-header
+		.container-fluid
+			.container
+				include ../components/breadcrumb/index.pug
+				include ../components/about/about-us/about-us-head/index.pug
+		.about-us-bottom
+			.container
+				include ../components/about/about-us/about-us-swiper/index.pug

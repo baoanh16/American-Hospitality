@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- var title = 'About'
+	- var bodyClass = 'people'
+
+block main
+	section.section-header
+		.container-fluid
+			.container
+				include ../components/breadcrumb/index.pug
+				include ../components/about/about-us-3/we-do/index.pug
+			include ../components/about/about-us-3/team-swiper/index.pug

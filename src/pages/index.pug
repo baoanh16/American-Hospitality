@@ -1,0 +1,45 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'home-page'
+
+block main
+	#fullpage.fullpage
+		ul#home-nav.home-nav
+			li.home-nav-li(data-menuanchor="firstPage")
+				a(href='#firstPage')
+					span.home-nav-text
+						span.home-nav-text-content Home
+					span.home-nav-dot
+					span.home-nav-tooltip Home
+			li.home-nav-li(data-menuanchor="secondPage")
+				a(href='#secondPage')
+					span.home-nav-text
+						span.home-nav-text-content Sale
+					span.home-nav-dot
+					span.home-nav-tooltip Sale
+			li.home-nav-li(data-menuanchor="thirdPage")
+				a(href='#thirdPage')
+					span.home-nav-text
+						span.home-nav-text-content Collection
+					span.home-nav-dot
+					span.home-nav-tooltip Collection
+			li.home-nav-li(data-menuanchor="fourthPage")
+				a(href='#fourthPage')
+					span.home-nav-text
+						span.home-nav-text-content Process
+					span.home-nav-dot
+					span.home-nav-tooltip Process
+			li.home-nav-li(data-menuanchor="lastPage")
+				a(href='#lastPage')
+					span.home-nav-text
+						span.home-nav-text-content About us
+					span.home-nav-dot
+					span.home-nav-tooltip About us
+
+		include ../components/home/home-swiper/index.pug
+		include ../components/home/home-discount/index.pug
+		include ../components/home/home-collection/index.pug
+		include ../components/home/home-process/index.pug
+		include ../components/home/home-about-us/index.pug

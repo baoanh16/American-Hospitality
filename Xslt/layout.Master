@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+
+<!DOCTYPE html>
+<html id="Html1" runat="server">
+
+<head id="Head1" runat="server">
+	<title></title>
+	<portal:MetaContent ID="MetaContent" runat="server" />
+
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link
+		href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900|Titillium+Web:300,400,400i,600,700,900&display=swap"
+		rel="stylesheet">
+	<!--[if lt IE 9]>
+		
+
+		
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
+		JQueryUIThemeName="smoothness" />
+	<portal:Favicon ID="Favicon1" runat="server" />
+	<portal:ScriptLoader ID="ScriptLoader1" runat="server" />
+	<portal:SkinFolderScript ID="SkinFolderScript1" runat="server" ScriptFileName="js/plugins.min.js"
+		AddToCombinedScript="true" />
+	<portal:SkinFolderScript ID="SkinFolderScript2" runat="server" ScriptFileName="js/customize.min.js"
+		AddToCombinedScript="true" />
+	<portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js"
+		AddToCombinedScript="true" />
+	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
+
+	<!--*********************************************************************************************-->
+	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
+	<!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
+	<!-- Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn                    -->
+	<!-- Facebook: https://www.facebook.com/canhcam.vn                                               -->
+	<!--*********************************************************************************************-->
+</head>
+
+<body id="Body" runat="server" class="canhcam">
+	<portal:FacebookSdk ID="fbsdk" runat="server" />
+	<portal:LayoutDisplaySettings ID="LayoutDisplaySettings1" runat="server" />
+	<form id="frmMain" runat="server">
+		<asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="PageMapDataSource" runat="server" ShowStartingNode="false" />
+		<asp:SiteMapDataSource ID="ChildPageSiteMapData" runat="server" ShowStartingNode="false" />
+		<asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server" />
+		<div id="wrapper">
+			<header class="afm-header-cc">
+				<section class="afm-header">
+					<div class="container">
+						<div class="afm-header-wrap">
+							<div class="navbrand">
+								<portal:modulewrapper id="mdl139" runat="server" configuremoduleid="139" />
+
+
+							</div>
+							<div class="main-nav-wrapper">
+								<portal:modulewrapper id="mdl140" runat="server" configuremoduleid="140" />
+							</div>
+							<div class="language-wrapper">
+								<portal:LanguageSelector ID="LanguageSelector" XsltFileName="Language.xslt"
+									ShowActive="true" runat="server" />
+							</div>
+							<div class="mobile-toggle"><em class="lnr lnr-menu"></em></div>
+						</div>
+					</div>
+				</section>
+			</header>
+			<main class="main">
+				<asp:Panel ID="divLeft" runat="server" CssClass="leftside" Visible="True" SkinID="pnlPlain">
+					<%--<portal:PageMenu ID="PageMenu1" IsSubMenu="true" MaxDataRenderDepth="-1" StartingNodeOffset="-1" xsltFileName="LeftMenu.xslt" runat="server" />--%>
+					<asp:ContentPlaceHolder ID="leftContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divCenter" runat="server" Visible="True" CssClass="center-rightandleftmargins"
+					SkinID="pnlPlain">
+					<%--<portal:Breadcrumbs ID="Breadcrumbs" WrapperCssClass="breadcrum" Separator="<li class='separate'>»</li>" runat="server"></portal:Breadcrumbs>--%>
+					<asp:ContentPlaceHolder ID="mainContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+				<asp:Panel ID="divRight" runat="server" Visible="True" CssClass="rightside" SkinID="pnlPlain">
+					<asp:ContentPlaceHolder ID="rightContent" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
+			</main>
+			<footer class="afm-footer">
+				<div class="container">
+					<div class="footer-open"><em class="mdi mdi-chevron-up"></em></div>
+					<div class="footer-wrapper">
+						<div class="row">
+							<div class="col-md-12 col-lg-3">
+								<div class="footer-logo-wrapper">
+									<div class="footer-logo">
+										<portal:modulewrapper id="mdl142" runat="server" configuremoduleid="142" />
+									</div>
+									<div class="contact">
+										<portal:modulewrapper id="mdl143" runat="server" configuremoduleid="143" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-3">
+								<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
+							</div>
+							<div class="col-md-6 col-lg-6">
+								<portal:modulewrapper id="mdl146" runat="server" configuremoduleid="146" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+		<portal:AutoHidePanel ID="ah1" CssClass="cmsadminpanel" runat="server">
+			<div class="row">
+				<div class="col-lg-12">
+					<nav>
+						<ul class="nav navbar-nav listmenu">
+							<portal:AdminMenuLink ID="lnkDashboard" IconCssClass="fa fa-key" RenderAsListItem="true"
+								runat="server" />
+							<portal:FileManagerLink ID="lnkFileManager" IconCssClass="fa fa-folder-open"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditFeaturesLink ID="lnkPageContent" IconCssClass="fa fa-cog"
+								RenderAsListItem="true" runat="server" />
+							<portal:PageEditSettingsLink ID="lnkPageSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<portal:NewZoneLink ID="lnkNewZone" IconCssClass="fa fa-file" RenderAsListItem="true"
+								runat="server" />
+							<portal:ZoneEditSettingsLink ID="lnkZoneSettings" IconCssClass="fa fa-edit"
+								RenderAsListItem="true" runat="server" />
+							<li>
+								<div class="form-inline">
+									<div class="form-group">
+										<label class="sr-only">Mode</label>
+									</div>
+									<div class="form-group">
+										<asp:ContentPlaceHolder ID="pageEditContent" runat="server">
+										</asp:ContentPlaceHolder>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav">
+							<li><a href="#" id="pullmenucms"><i class="fa fa-chevron-circle-right"></i></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
+			<script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
+		</portal:AutoHidePanel>
+		<portal:Woopra ID="woopra11" runat="server" />
+	</form>
+</body>
+
+</html>

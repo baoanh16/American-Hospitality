@@ -1,0 +1,111 @@
+.products-filter-top
+	padding: 70px 0 0 0
+	.product-filter-title
+		width: 0
+		height: 0
+		overflow: visible
+		position: relative
+		-webkit-transform: rotate(-90deg)
+		transform: rotate(-90deg)
+		text-align: left
+		float: left
+		display: inline-block
+		z-index: 1
+		p
+			position: absolute
+			bottom: 26px
+			right: -16px
+			display: block
+			white-space: nowrap
+			overflow: visible
+			font-family: 'Cinzel'
+			text-transform: uppercase
+			font-size: 14px
+			color: #ff0000
+			font-weight: 400
+			background-image: -webkit-linear-gradient(left, #ff0000 0, #800000 100%)
+			background-image: linear-gradient(to right, #ff0000 0, #800000 100%)
+			-moz-background-clip: text
+			background: -o-linear-gradient(transparent, transparent)
+			-webkit-background-clip: text
+	.filter-top-wrapper
+		padding:  0 30px
+		height: 50px
+		width: 100%
+		background: #ffffff
+		display: flex
+		justify-content: flex-start
+		align-items: center
+
+		box-shadow: 0px 0px 5px 0px rgba(11, 11, 11, 0.1)
+
+
+		h2
+			padding-right: 50px
+			font-family: 'Cinzeal'
+			color: #666666
+			white-space: nowrap
+			font-size: 16px
+			font-weight: 400
+			line-height: 22px
+			text-transform: uppercase
+		.select-wrapper
+			width: 150px
+			position: relative
+			&:after
+				font-family: "Linearicons-Free"
+				content: '\e874'
+				font-size: 14px
+				font-weight: 600
+				color: #333333
+				position: absolute
+				bottom: 3px
+				pointer-events: none
+				line-height: 16px
+				right: -16px
+				transition: transform .3s ease,-webkit-transform 
+			select
+				padding: 0 16px
+				width: 100%
+				border: none
+				font-size: 16px
+				color: #333333
+				font-family: 'Cinzeal'
+				text-transform: uppercase
+				-webkit-appearance: none
+				appearance: none
+				option
+					font-size: 16px
+				&:focus
+					outline: none
+					font-size: 16px
+					color: #333333
+	@media screen and(max-width:768px)
+		.product-filter-title
+			transform: none
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			text-align: center
+			height: 25px
+			padding-bottom: 50px
+			p
+				position: static
+				font-size: 24px
+	@media screen and(max-width:576px)
+		.filter-top-wrapper
+			align-items: center
+			justify-content: center
+			h2
+				padding-right: 30px
+				font-stretch: 14px
+			.select-wrapper
+				width: 120px
+				&:after
+					right: -8px
+				select
+					font-size: 14px
+					padding: 0 8px
+					option
+						font-size: 14px

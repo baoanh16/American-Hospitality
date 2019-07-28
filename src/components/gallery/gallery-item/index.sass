@@ -1,0 +1,73 @@
+.gallery-display-item
+	padding-bottom: 100px
+	.col-md-4
+		&:nth-child(3n+2)
+			margin-top: -40px
+		@media screen and(max-width:768px)
+			&:nth-child(3n+2)
+				margin-top: 0
+	.gallery-item
+		margin-bottom: 40px
+	.lightgallery
+		a
+			&:not(:first-child)
+				display: none
+	.gallery-image-fit
+		height: 260px
+		width: auto
+		position: relative
+		z-index: 2
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			background-image: url('../img/bg-image.png')
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: bottom
+			width: 100%
+			height: 100%
+			left: 0
+			z-index: -1
+			bottom: -8%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.gallery-image
+		img
+			max-width: 100%
+	.gallery-caption
+		h5
+			padding-top: 20px
+			font-size: 16px
+			text-transform: uppercase
+			font-weight: 700
+			font-family: 'Cinzel'
+			color: #373737
+	@media screen and(max-width:1600px)
+		.gallery-image-fit
+			&:after
+				bottom: -6%
+	@media screen and(max-width:1200px)
+		.gallery-item
+			margin-bottom: 30px
+		.gallery-image-fit
+			&:after
+				bottom: -5%
+	@media screen and(max-width:1025px)
+		.gallery-image-fit
+			height: 210px
+			&:after
+				bottom: -5%
+	@media screen and(max-width:768px)
+		.gallery-image-fit
+			height: 160px
+			&:after
+				bottom: -5%
+		.gallery-caption
+			h5
+				padding-top: 10px
+	@media screen and(max-width:576px)
+		.gallery-image-fit
+			height: 250px

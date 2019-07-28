@@ -1,0 +1,164 @@
+footer
+	overflow: hidden
+	left: 0
+	background: #fff
+	padding: 60px 0 20px
+	position: fixed
+	bottom: 26px
+	z-index: 112
+	width: 100vw
+	transform: translateY(100%)
+	transition: transform .7s ease 0s
+	&.active-open
+		transform: translateY(26px)
+		.footer-open
+			em
+				transform: rotate(180deg)
+	.footer-logo-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		flex-direction: column
+		.footer-logo
+			padding-bottom: 30px
+			img
+				max-width: 100%
+				height: auto
+		.contact
+			p
+				font-size: 16px 
+				color: #373737
+				font-weight: 400
+		@media screen and(max-width: 1025px)
+			flex-flow: row
+			margin-bottom: 50px
+			.contact
+				text-align: right
+		@media screen and(max-width:767.9px)
+			display: flex
+			justify-content: center
+			margin: 0
+			align-items: center
+			flex-flow: column
+			padding:  0 0 30px 0
+			.footer-logo
+				padding-bottom: 40px
+			.contact
+				text-align: center
+
+	.footer-open
+		position: absolute
+		left: 0
+		top: 0
+		height: 25px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		em
+			transition: transform .3s ease
+			font-size: 25px
+			color: #373737
+	.footer-wrapper
+		padding: 0
+		&:before,&:after
+			content: ""
+			display: table
+	.link-page
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			display: block
+		li
+			padding: 6px 0
+			&:hover
+				a
+					background-image: -webkit-linear-gradient(to right,#ff0000 0,#800000 100%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+			a
+				text-transform: uppercase
+				color: #373737
+				font-size: 14px
+		@media screen and(max-width: 767.9px)
+			display: block
+			text-align: center
+			padding-bottom: 20px
+	.social-footer
+		ul
+			padding: 0
+			margin: 0
+			list-style-type: none
+			&:hover
+				li
+					a
+						em
+							color: #cacaca
+			li
+				display: inline-flex
+				margin: 0 100px 40px 0
+				
+				&:hover
+					&:nth-child(1)
+						a
+							em
+								color: #3b5999
+					&:nth-child(2)
+						a
+							em
+								color: #55acee
+					&:nth-child(3)
+						a
+							em
+								color: #bd081c
+					&:nth-child(4)
+						a
+							em
+								color: #cd201f
+					&:nth-child(5)
+						a
+							em
+								color: #0077B5
+					&:nth-child(6)
+						a
+							em
+								color: #3f729b
+				a
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					position: relative
+					
+					img
+						
+						width: 25px
+						height: 25px
+						line-height: 40px
+						margin-bottom: 9px
+					em
+						transition: all .3s ease 0s
+						color: #373737
+						font-size: 20px
+					p
+						padding-top: 10px
+						font-size: 14px
+						font-weight: 400
+						text-transform: uppercase
+						font-family: 'Cinzel'
+						color: #373737
+		@media screen and(max-width: 1025px)
+			ul
+				li
+					margin: 0 13px 40px 0
+		@media screen and(max-width: 767.9px)
+			ul
+				display: flex
+				justify-content: space-around
+				align-items: center
+				li
+					margin: 0 0
+					a
+						p
+							display: none

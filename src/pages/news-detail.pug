@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- var title = 'News'
+	- var bodyClass = 'news-detail'
+
+block main
+	section.section-header
+		.container-fluid
+			.container
+				include ../components/breadcrumb/index.pug
+				include ../components/news-detail/news-article/index.pug
+				include ../components/news-detail/news-others/index.pug

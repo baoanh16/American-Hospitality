@@ -1,0 +1,120 @@
+.afm-home-swiper
+	.home-pagination
+		left: auto
+		width: auto
+		display: inline-block
+		right: 20px
+		bottom: 70px
+		.swiper-pagination-bullet
+			margin: 0 16px
+			width: 12px
+			height: 12px
+			background: #666
+			opacity: 1
+			transition: .3s all ease-in-out
+			&:hover
+				border-radius: 0
+				background: none
+				border: 2px solid #df1c1c
+		.swiper-pagination-bullet-active
+			border: 2px solid #df1c1c
+			border-radius: 0
+			background: none
+	.swiper-slide
+		position: relative
+	.swiper-image
+		width: auto
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	.swiper-caption
+		position: absolute
+		top: 50%
+		left: 50%
+		text-align: center
+		transform: translate(-50%,-50%)
+		*
+			color: #ffffff
+			font-family: 'Cinzel'
+			text-transform: uppercase
+		.title
+			font-size: 55px
+			line-height: 63px
+		.caption
+			font-size: 14px
+			margin: 50px 0
+	.raton-wrapper
+		.raton
+			z-index: 12
+			animation: animation-raton 1.1s linear
+			width: 24px
+			height: 40px
+			border-radius: 12px
+			border: 1px solid #ffffff
+			bottom: 30px
+			left: 50%
+			margin-left: -12px
+			position: absolute
+			display: block
+			&__scroll
+				width: 1px
+				height: 6px
+				margin: 5px auto 0
+				background: #ffffff
+				animation: raton-scroll 1.8s linear infinite
+	@media screen and(max-width:1600px)
+		.swiper-caption
+			.title
+				font-size: 35px
+				line-height: 48px
+	@media screen and(max-width:1200px)
+		.swiper-caption
+			.title
+				font-size: 30px
+				line-height: 42px
+			.caption
+				margin: 20px 0
+	@media screen and(max-width:1025px)
+		.swiper-caption
+			top: 60%
+			min-width: 500px
+			display: flex
+			flex-flow: column
+			justify-content: center
+			align-items: center
+			padding: 0 29px
+		.raton-wrapper
+			.raton
+				display: none
+	@media screen and(max-width:768px)
+		height: 70vh
+		.container-fluid
+			height: 100%
+		.swiper-container
+			height: 100%
+		.wrapper
+			height: 100%
+		.swiper-image
+			height: 100%
+		.swiper-caption
+			.title
+				font-size: 22px
+				line-height: 30px
+			.caption
+				font-size: 13px
+				line-height: 22px
+	@media screen and(max-width:576px)
+		.swiper-caption
+			top: 60%
+			.title
+				font-size: 22px
+				padding: 0 50px
+				line-height: 30px
+			.caption
+				display: none
+	@media screen and(max-width:576px)
+		.swiper-caption
+			.title
+				padding: 0 80px

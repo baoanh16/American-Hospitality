@@ -1,0 +1,56 @@
+.about-us-sevices-quote
+	padding: 100px 0
+	.service-quote
+		margin: 0 auto
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-flow: column
+		width: 650px
+
+	h2
+		position: relative
+		text-align: center
+		font-size: 30px
+		font-weight: 700
+		color: #333333
+		font-family: 'Cinzel'
+		line-height: 38px
+		&:before
+			content: '“'
+			position: absolute
+			top: 0
+			left: -25px
+			font-family: 'Cinzel'
+			font-weight: 900
+			font-size: 60px
+			color: #f3a2a3
+			line-height: 1
+		&:after
+			content: '”'
+			position: absolute
+			bottom: -25px
+			right: -25px
+			font-family: 'Cinzel'
+			font-weight: 900
+			font-size: 60px
+			color: #f3a2a3
+			line-height: 0
+	p
+		font-size: 20px
+		line-height: 28pxs
+		color: #666666
+	@media screen and(max-width:1025px)
+		padding: 70px 0
+		h2
+			font-size: 25px
+	@media screen and (max-width:768px)
+		padding: 50px 0
+		h2
+			font-size: 22px
+		p
+			font-size: 16px
+			line-height: 22px
+		.service-quote
+			width: auto
+	
